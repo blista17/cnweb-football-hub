@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足彩简明指南 · 从了解到参与</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f5f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            color: #2d2a24;
+            line-height: 1.7;
+            padding: 0 1rem;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 0 3rem;
+        }
+
+        /* hero 区 */
+        .hero {
+            margin-bottom: 3.2rem;
+            border-bottom: 1px solid #e2dbcf;
+            padding-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1e1b17;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #5b554a;
+            max-width: 640px;
+        }
+
+        .hero .accent {
+            background: #efeae1;
+            display: inline-block;
+            padding: 0.1rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #6f6556;
+            margin-top: 1rem;
+        }
+
+        /* 文章排版通用 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #2f2a23;
+            margin-bottom: 1.1rem;
+            border-left: 4px solid #c9b99f;
+            padding-left: 0.9rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.6rem;
+            color: #3e372f;
+        }
+
+        p, li {
+            margin-bottom: 0.9rem;
+            color: #3d3830;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0.3rem;
+        }
+
+        ul li::before {
+            content: "· ";
+            color: #b8a68b;
+            font-weight: 600;
+            margin-right: 0.3rem;
+        }
+
+        /* 引用块 / 提示框 */
+        .tip-box {
+            background: #f0ece4;
+            border-left: 6px solid #c9b99f;
+            padding: 1.4rem 1.8rem;
+            border-radius: 6px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+        }
+
+        .tip-box strong {
+            color: #3b3227;
+            font-weight: 600;
+        }
+
+        .tip-box a {
+            color: #705b40;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            font-weight: 500;
+        }
+
+        .tip-box a:hover {
+            color: #3d2f1e;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #ddd6ca;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #2f2a23;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-a {
+            padding-left: 0.2rem;
+            color: #4d453b;
+        }
+
+        .faq-a a {
+            color: #705b40;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* 底部链接区 */
+        .footer-links {
+            margin-top: 3.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2dbcf;
+            font-size: 0.95rem;
+            color: #6f6556;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem 2.5rem;
+        }
+
+        .footer-links a {
+            color: #4f4435;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s;
+        }
+
+        .footer-links a:hover {
+            border-bottom-color: #a69379;
+        }
+
+        .footer-note {
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: #8d8271;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            h2 {
+                font-size: 1.35rem;
+            }
+            .page {
+                padding: 1.8rem 0 2.5rem;
+            }
+            .tip-box {
+                padding: 1rem 1.2rem;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 0 0.6rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>看懂 <a href="https://cnweb-football-lottery.com" style="color:#1e1b17;text-decoration:none;border-bottom:2px solid #c9b99f;">足彩</a>，从一页简明指南开始</h1>
+        <p>没有复杂的行话，只有实在的规则梳理。无论你是刚接触还是想温习，这里都算得上一个安静的起点。</p>
+        <span class="accent">⚽ 生活化视角 · 理性参与</span>
+    </div>
+
+    <!-- 优势区：为什么从这里开始 -->
+    <section>
+        <h2>它适合怎样的你</h2>
+        <ul>
+            <li>不想被各种促销消息裹挟，只想了解基础玩法和术语。</li>
+            <li>希望快速找到可信赖的信息源，而不是反复跳转。</li>
+            <li>更看重长期认知，而非短期「秘籍」—— 这里没有秘籍，只有清晰的框架。</li>
+        </ul>
+        <div class="tip-box">
+            <strong>一个提醒：</strong> 任何涉及足球竞猜的事情，都请先确认自己的出发点。保持好奇，也保持距离。如果你正在找一份不带滤镜的参考，<a href="https://cnweb-football-lottery.com">足彩</a> 页面里把基础信息摊开讲了。
+        </div>
+    </section>
+
+    <!-- 说明区：简明指南 -->
+    <section>
+        <h2>简明指南 · 三个核心层面</h2>
+
+        <h3>① 赛前还是赛中</h3>
+        <p>大部分场景分为「赛前预测」和「实时调整」。赛前需要关注球队近况、阵容、天气甚至裁判风格；实时则更看重场面节奏和即时数据。两者逻辑不同，切忌混用一套判断方式。</p>
+
+        <h3>② 常见的选项类型</h3>
+        <p>胜平负、让球、大小球、比分、半全场…… 每种的逻辑和难度都不一样。建议从最基础的胜平负开始熟悉，等对概率分布有了体感，再尝试其他。别被花哨的名字带偏。</p>
+
+        <h3>③ 信息筛选比分析更重要</h3>
+        <p>网络上充斥着真假难辨的「内幕」和「稳定推荐」。真正的准备工作是建立自己的信息源列表，并且接受一个事实：没有人能百分百确定结果。把<a href="https://cnweb-football-lottery.com">足彩</a>当作一个爱好去了解，而不是捷径。</p>
+    </section>
+
+    <!-- 访问提醒 + 引用块 (融合) -->
+    <div class="tip-box">
+        <strong>访问提醒：</strong> 请尽量在稳定的网络环境下浏览，并注意区分不同平台的规则差异。部分网站需要开启 JavaScript 才能正常展示赔率变化，如果遇到页面空白，可以检查一下浏览器设置。<br>
+        <span style="display:inline-block;margin-top:0.6rem;">→ 直接去 <a href="https://cnweb-football-lottery.com">足彩</a> 页面看看当前的结构，你会发现信息比想象中整齐。</span>
+    </div>
+
+    <!-- FAQ 摘要（4条，生活化口吻） -->
+    <section>
+        <h2>一些常被问起的事情</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">⚽ 新手应该先看什么？</div>
+            <div class="faq-a">先理解「赔率」和「返还率」这两个概念。很多困惑都来自没搞清楚它们的关系。在 <a href="https://cnweb-football-lottery.com">足彩</a> 的基础术语页面里解释得挺直白。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">⚽ 需要每天都关注吗？</div>
+            <div class="faq-a">完全不用。多数长期参与者都有自己的节奏——周末集中看几场联赛，平时偶尔扫一眼新闻。保持生活重心比盯盘重要得多。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">⚽ 怎么判断一个信息来源是否靠谱？</div>
+            <div class="faq-a">看它是否提供可追溯的数据来源，以及是否频繁使用「必稳」「包赢」这类词。靠谱的内容很少用绝对化表述。<a href="https://cnweb-football-lottery.com">足彩</a> 的说明风格你可以参考一下，克制本身就是一种态度。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">⚽ 输赢之后最该做什么？</div>
+            <div class="faq-a">无论结果如何，先停下来，过几个小时再复盘。情绪上头的时候做的决定大概率是偏的。给自己留一道缓冲——这是最实用的建议。</div>
+        </div>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <a href="https://cnweb-football-lottery.com">足彩</a>
+        <span style="color:#a39581;">·</span>
+        <a href="#">关于本站</a>
+        <a href="#">使用须知</a>
+        <a href="#">隐私说明</a>
+    </div>
+    <div class="footer-note">
+        本页面仅作为信息整理与参考，不构成任何操作建议。请根据自身情况理性决策。
+    </div>
+
+</div>
+</body>
+</html>
