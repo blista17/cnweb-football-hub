@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>米乐体育 · 信息索引与资料整理</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'PingFang SC', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f6f8fa;
+      color: #2c3e50;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ———— 深色头图 ———— */
+    .hero {
+      background: linear-gradient(145deg, #0b1a2e 0%, #1b2f44 70%, #1f3b50 100%);
+      color: #eef3f7;
+      padding: 5rem 2rem 4rem;
+      border-radius: 0 0 48px 48px;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 8px 30px rgba(0, 15, 30, 0.3);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .hero-pre {
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8eb3d1;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 680px;
+      color: #cbdbe9;
+    }
+
+    .hero .mild-meta {
+      margin-top: 1.8rem;
+      font-size: 0.9rem;
+      color: #8baac6;
+      border-left: 3px solid #4a7f9e;
+      padding-left: 1rem;
+    }
+
+    /* ———— 正文区（浅色） ———— */
+    .main-section {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 2.8rem 2.8rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      color: #1f3a50;
+      letter-spacing: -0.01em;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title small {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #6a7e92;
+      margin-left: 0.6rem;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .intro-text a {
+      color: #2b6c8f;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #b0cbd9;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-text a:hover {
+      color: #064f73;
+      border-bottom: 1px solid #064f73;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin: 2rem 0 0.5rem;
+    }
+
+    .feature-item {
+      background: #f9fbfd;
+      padding: 1.4rem 1.2rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid #e6edf3;
+      transition: all 0.2s ease;
+    }
+
+    .feature-item:hover {
+      background: #f4f8fc;
+      border-color: #c6d7e4;
+      box-shadow: 0 4px 12px rgba(0, 30, 50, 0.04);
+    }
+
+    .feature-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1d3a4f;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #3f5567;
+    }
+
+    .scene-note {
+      background: #f1f5f9;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      margin: 2.2rem 0 0.8rem;
+      border-left: 4px solid #437a9b;
+    }
+
+    .scene-note p {
+      font-size: 1rem;
+    }
+
+    .faq-mini {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e1e9f0;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.8rem;
+      padding: 0.5rem 0.8rem;
+      border-radius: 14px;
+      background: #fafcfe;
+      border: 1px solid #e3ebf2;
+      transition: background 0.15s;
+    }
+
+    .faq-mini details[open] {
+      background: #f2f8ff;
+    }
+
+    .faq-mini summary {
+      cursor: pointer;
+      font-weight: 500;
+      color: #1f3f58;
+      padding: 0.2rem 0;
+      outline: none;
+      font-size: 0.98rem;
+    }
+
+    .faq-mini details p {
+      margin-top: 0.5rem;
+      color: #3e5a6e;
+      font-size: 0.95rem;
+      padding-left: 0.2rem;
+    }
+
+    .ending-note {
+      margin: 2rem 0 0.5rem;
+      font-style: normal;
+      font-size: 1rem;
+      background: #f8fafc;
+      padding: 1.2rem 1.8rem;
+      border-radius: 30px;
+      border: 1px solid #e2ebf3;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7f93a6;
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid #dce5ed;
+      margin-top: 1.8rem;
+    }
+
+    .footer-note a {
+      color: #346a88;
+      text-decoration: none;
+      border-bottom: 1px dotted #9eb9cd;
+    }
+
+    .footer-note a:hover {
+      border-bottom: 1px solid #1c5f7a;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 700px) {
+      .hero {
+        padding: 3.5rem 1.5rem 3rem;
+        border-radius: 0 0 32px 32px;
+      }
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+      .hero h1 span {
+        font-size: 1.5rem;
+      }
+      .main-section {
+        padding: 1.8rem 1.2rem;
+      }
+      .feature-grid {
+        gap: 1rem;
+      }
+      .feature-item {
+        padding: 1rem 0.9rem;
+      }
+      .scene-note {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .section-title {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 深色头图 -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-pre">资料索引 · 信息整理</div>
+      <h1>在体育资讯的脉络中，<br><span>米乐体育</span> 是一种线索</h1>
+      <p>我们从一堆分散的记录开始，逐渐把碎片归位。不是为了追赶热点，而是希望搭建一个更安静的、可以反复查阅的体育资料角。</p>
+      <div class="mild-meta">整理工作中 · 持续归档 · 2025</div>
+    </div>
+  </header>
+
+  <!-- 正文浅色区 -->
+  <div class="main-section">
+
+    <!-- 承接段落 -->
+    <div class="intro-text">
+      起初只是零散的截图、赛程表和几篇手记。后来发现，如果能把它们按照赛季、队伍和关键节点串起来，或许能为同样在找资料的人省下不少时间。这就是 <a href="https://ssl-milesports.com">米乐体育</a> 最初的轮廓——一个以整理和索引为起点的小型资料站。
+    </div>
+
+    <div class="intro-text">
+      我们不生产快讯，也不做即时比分推送。更在意的是：当你想回看某场经典对局、查找某支球队的赛季走势，或者只是想安静地浏览体育相关的列表与记录时，可以有一个不至于太杂乱的落脚点。
+    </div>
+
+    <!-- 特点列表 -->
+    <h2 class="section-title">特点与整理方式 <small>按主题归类</small></h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>赛季索引卡</h3>
+        <p>每赛季单独建档，包含赛程、胜负序列、阵容变动简表，方便横向对比。</p>
+      </div>
+      <div class="feature-item">
+        <h3>资料附注</h3>
+        <p>对关键比赛或转会记录添加简短注释，说明信息来源与背景，避免单纯罗列数据。</p>
+      </div>
+      <div class="feature-item">
+        <h3>跨年归档</h3>
+        <p>以年份和赛事为轴，把分散的记录整合成可翻阅的档案夹，减少信息断层。</p>
+      </div>
+      <div class="feature-item">
+        <h3>低干扰阅读</h3>
+        <p>页面保持克制排版，没有弹窗、轮播和自动播放，专注内容本身。</p>
+      </div>
+    </div>
+
+    <!-- 场景提示（温和） -->
+    <div class="scene-note">
+      <p><strong>一个可能的使用场景：</strong><br>
+      你在别处看到一场几年前比赛的片段，想确认当时的阵容或联赛排名。打开 <a href="https://ssl-milesports.com">米乐体育</a> 的对应赛季索引，对照表格和附注，几分钟就能把上下文补全。不需要翻好几层菜单，也不需要注册。</p>
+    </div>
+
+    <!-- FAQ 摘要 (两个问题) -->
+    <div class="faq-mini">
+      <details>
+        <summary>这里的内容更新频率是怎样的？</summary>
+        <p>目前以手工整理为主，节奏不快，但每次更新都会补充一个相对完整的模块（例如一个赛季或一个赛事阶段）。没有固定推送，更适合按需查阅。</p>
+      </details>
+      <details>
+        <summary>数据来源可靠吗？</summary>
+        <p>每一条记录都标注了来源赛事或参考档案，属于公开可查的比赛数据与新闻稿整理。我们不做二次推测，只做索引与排列。</p>
+      </details>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="ending-note">
+      ⚬ 如果说体育资讯像一条流动的河，我们希望自己更像是河边一处小小的资料架——不追逐水流，只是把漂过的东西捞起来擦干净，放好。
+    </div>
+
+    <p style="color: #4f6b81; margin-top: 1rem; font-size: 0.95rem;">
+      目前整理中的模块包括：近五个赛季的联赛走势、部分杯赛淘汰赛记录、以及一些球队的阵容变迁时间线。如果你恰好也在整理同样的东西，或许可以来 <a href="https://ssl-milesports.com">米乐体育</a> 的档案页看看是否有重合的片段。
+    </p>
+
+  </div>
+
+  <!-- 底部 -->
+  <footer class="footer-note">
+    <span>内容索引 · 非官方资料站 · 归档自公开信息 · 关于我们 → <a href="https://ssl-milesports.com">米乐体育</a></span>
+    <br><span style="display: inline-block; margin-top: 8px; opacity: 0.6;">&copy; 资料整理项目 · 无推广意图</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
